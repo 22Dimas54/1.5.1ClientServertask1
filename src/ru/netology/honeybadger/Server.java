@@ -8,13 +8,6 @@ import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 
-/*
-В данной задаче выбрал NonBlocking, так как пользователь может продолжительное время набирать большой
-текст и передавать его каналу, а тот складывать данные в буфер, в это время, чтобы не простаивать сервер может заниматься
-другими задачами, после обратиться к каналу, чтобы тот проверил если там какие-то данные для обрботки в буфере, если есть
-сервер получает, обратывает и передает каналу, который отправляет их в буфер для клиента.
- */
-
 public class Server {
     private final static int PORT = 56432;
     private final static String HOST = "netology.homework";
